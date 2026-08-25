@@ -367,13 +367,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ded01441108a274ea0e26ba5ef57e8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assignment.Lecture
-  lct04_ironManSuitNames: []
+  lct04_ironManSuitNames:
+  - Mark I
+  - Mark II
+  - Mark III
+  - Mark IV
+  - Mark V
+  - Mark VI
+  - Mark VII
   lct06_my2DArray:
     rows: 3
     cols: 5
     data: 010000000200000003000000040000000500000001000000020000000300000004000000050000000100000002000000030000000400000005000000
-  lct07_columns: 0
-  lct07_rows: 0
+  lct07_columns: 10
+  lct07_rows: 10
 --- !u!4 &1586219088
 Transform:
   m_ObjectHideFlags: 0

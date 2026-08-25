@@ -10,11 +10,11 @@ namespace Assignment
     {
         public void Start()
         {
-            AS01_RandomItemDrop();
-            // AS02_NestedLoopForCreate2DMap();
+            // AS01_RandomItemDrop();
+            // 0AS02_NestedLoopForCreate2DMap();
             // AS03_NestedLoopForMakingWallAround();
             // AS04_AttackEnemy();
-            // AS05_DynamicIterationLoop();
+             AS05_DynamicIterationLoop();
             // AS06_WhileLoopAndArray();
             // AS07_HealTargetAtIndex();
             // AS08_RandomPickingDialogue();
@@ -46,7 +46,13 @@ namespace Assignment
         public GameObject[] as01_items;
         public void AS01_RandomItemDrop()
         {
-            throw new NotImplementedException();
+            int randomItem = UnityEngine.Random.Range(0, as01_items.Length);
+
+            GameObject selectItem = as01_items[randomItem];
+            Instantiate(selectItem);
+
+            Debug.Log($"Got Item : {selectItem.name}");
+
         }
 
         /*
@@ -108,7 +114,19 @@ namespace Assignment
         public int as02_rows;
         public void AS02_NestedLoopForCreate2DMap()
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < as02_rows; i++) 
+            {
+                string nameFloor = "";
+                for (int j = 0; j < as02_columns; j++) 
+                {
+                    int randomFloor = UnityEngine.Random.Range(0, as02_floorTiles.Length);
+                    GameObject floor = as02_floorTiles[randomFloor];
+                    Instantiate(floor, new Vector2(j, i), floor.transform.rotation);
+
+                    nameFloor += $"{floor.name} ";
+                }
+                Debug.Log (nameFloor);
+            }
         }
 
         /*
@@ -202,7 +220,22 @@ namespace Assignment
         public int as03_rows;
         public void AS03_NestedLoopForMakingWallAround()
         {
-            throw new NotImplementedException();
+            for (int y = 0; y < as03_rows; y++) 
+            {
+                string strBox = "";
+                for (int x = 0; x < as03_columns; x++) 
+                {
+                    if (x == 0 || x == as03_columns - 1 || y == 0 || y == as03_rows - 1)
+                    {
+                        strBox += "*";
+                    }
+                    else 
+                    {
+                        strBox += " ";
+                    }
+                }
+                Debug.Log(strBox);
+            }
         }
 
         /*
@@ -237,7 +270,15 @@ namespace Assignment
         public int as04_target;
         public void AS04_AttackEnemy()
         {
-            throw new NotImplementedException();
+            as04_enemyHP[0] -= as04_damage;
+            Debug.Log($"First Enemy hp : {as04_enemyHP[0]}");
+
+            as04_enemyHP[as04_enemyHP.Length - 1] -= as04_damage;
+            Debug.Log($"Last Enemy hp : {as04_enemyHP[as04_enemyHP.Length - 1]}");
+
+            as04_enemyHP[as04_target] -= as04_damage;
+            Debug.Log($"Target Enemy {as04_target} hp : {as04_enemyHP[as04_target]}");
+
         }
 
         /*

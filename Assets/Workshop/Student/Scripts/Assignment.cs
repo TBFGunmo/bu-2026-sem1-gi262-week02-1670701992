@@ -14,8 +14,8 @@ namespace Assignment
             // 0AS02_NestedLoopForCreate2DMap();
             // AS03_NestedLoopForMakingWallAround();
             // AS04_AttackEnemy();
-             AS05_DynamicIterationLoop();
-            // AS06_WhileLoopAndArray();
+             // AS05_DynamicIterationLoop();
+             AS06_WhileLoopAndArray();
             // AS07_HealTargetAtIndex();
             // AS08_RandomPickingDialogue();
             // AS09_MultiplicationTable();
@@ -301,7 +301,10 @@ namespace Assignment
         public int as05_n;
         public void AS05_DynamicIterationLoop()
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < as05_n; i++) 
+            {
+                Debug.Log($"{i}");
+            }
         }
 
         /*

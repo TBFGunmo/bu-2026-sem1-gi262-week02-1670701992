@@ -181,7 +181,7 @@ MonoBehaviour:
   as04_enemyHP: 0a000000140000001e000000
   as04_damage: 5
   as04_target: 2
-  as05_n: 3
+  as05_n: 5
   as06_ironManSuitNames:
   - Mark I
   - Mark II

@@ -13,7 +13,7 @@ namespace Assignment
         {
             // AS01_RandomItemDrop();
             // 0AS02_NestedLoopForCreate2DMap();
-            // AS03_NestedLoopForMakingWallAround();
+             AS03_NestedLoopForMakingWallAround();
             // AS04_AttackEnemy();
              // AS05_DynamicIterationLoop();
             // AS06_WhileLoopAndArray();
@@ -27,7 +27,7 @@ namespace Assignment
             // AS14_SumOfNumbersInColumn();
             // AS15_MakeTheTriangle();
             // AS16_MultiplicationTableOf_2_3_and_4();
-             EX_01_TicTacToeGame_TurnPlay();
+            // EX_01_TicTacToeGame_TurnPlay();
 
         }
 
@@ -228,6 +228,7 @@ namespace Assignment
                 {
                     if (x == 0 || x == as03_columns - 1 || y == 0 || y == as03_rows - 1)
                     {
+                        Instantiate(as03_wall, new Vector2(x, y), transform.rotation);
                         strBox += "*";
                     }
                     else 
